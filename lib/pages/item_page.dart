@@ -13,9 +13,16 @@ class _ItemPageState extends State<ItemPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Item')),
-      body: const Center(
-        child: Text('Item information will be displayed here.'),
+      appBar: AppBar(centerTitle: true, title: Text(widget.item.name)),
+      body: Column(
+        children: [
+          Image.asset(widget.item.imagePath),
+          SizedBox(height: 10),
+          Text(
+            widget.item.name,
+            style: const TextStyle(fontFamily: 'BebasNeue Thin', fontSize: 18),
+          ),
+        ],
       ),
     );
   }

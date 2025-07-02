@@ -28,17 +28,17 @@ class _StorePageState extends State<StorePage> {
       imagePath: 'assets/images/product2.png',
     ),
     Item(
-      name: 'Versatile Seamless Tank',
+      name: 'Tactical 6" Short',
       description:
           'In deze lichtgewicht, zweetafvoerende en seamless ontwerpen blijft je je hoofd volledig gericht op je workouts.',
-      price: 30.40,
+      price: 52,
       imagePath: 'assets/images/product3.png',
     ),
     Item(
-      name: 'Versatile Seamless Tank',
+      name: 'Fit Repeat 6" Shorts',
       description:
           'In deze lichtgewicht, zweetafvoerende en seamless ontwerpen blijft je je hoofd volledig gericht op je workouts.',
-      price: 30.40,
+      price: 44,
       imagePath: 'assets/images/product4.png',
     ),
     // duplicates
@@ -57,17 +57,17 @@ class _StorePageState extends State<StorePage> {
       imagePath: 'assets/images/product2.png',
     ),
     Item(
-      name: 'Versatile Seamless Tank',
+      name: 'Tactical 6" Short',
       description:
           'In deze lichtgewicht, zweetafvoerende en seamless ontwerpen blijft je je hoofd volledig gericht op je workouts.',
-      price: 30.40,
+      price: 52,
       imagePath: 'assets/images/product3.png',
     ),
     Item(
-      name: 'Versatile Seamless Tank',
+      name: 'Fit Repeat 6" Shorts',
       description:
           'In deze lichtgewicht, zweetafvoerende en seamless ontwerpen blijft je je hoofd volledig gericht op je workouts.',
-      price: 30.40,
+      price: 44,
       imagePath: 'assets/images/product4.png',
     ),
   ];
