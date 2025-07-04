@@ -35,6 +35,7 @@ class _NewsPageState extends State<NewsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ListView.builder(
         itemCount: _newsList.length,
         itemBuilder: (context, index) {
