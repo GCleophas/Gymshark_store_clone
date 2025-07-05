@@ -36,11 +36,35 @@ class _NewsPageState extends State<NewsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView.builder(
-        itemCount: _newsList.length,
-        itemBuilder: (context, index) {
-          return NewsTile(news: _newsList[index]);
-        },
+      body: Column(
+        children: [
+          // Search bar
+          Padding(
+            padding: const EdgeInsets.only(left: 25, right: 25, top: 16),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Wat zoek je vandaag?',
+                hintStyle: TextStyle(color: Colors.grey[800]),
+                prefixIcon: Icon(Icons.search, color: Colors.black),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                  borderSide: BorderSide.none,
+                ),
+                filled: true,
+                fillColor: Colors.grey[200],
+              ),
+            ),
+          ),
+          // News list
+          Expanded(
+            child: ListView.builder(
+              itemCount: _newsList.length,
+              itemBuilder: (context, index) {
+                return NewsTile(news: _newsList[index]);
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
