@@ -44,8 +44,8 @@ class _NewsPageState extends State<NewsPage> {
             child: TextField(
               decoration: InputDecoration(
                 hintText: 'Wat zoek je vandaag?',
-                hintStyle: TextStyle(color: Colors.grey[800]),
-                prefixIcon: Icon(Icons.search, color: Colors.black),
+                hintStyle: TextStyle(color: Colors.grey[800], fontSize: 15),
+                prefixIcon: Icon(Icons.search, color: Colors.black, size: 35),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5.0),
                   borderSide: BorderSide.none,

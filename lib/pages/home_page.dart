@@ -43,17 +43,28 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       // Top title bar
       appBar: AppBar(
+        toolbarHeight: 100,
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
-        title: Text(
-          "GYMSHARK",
-          style: const TextStyle(
-            fontFamily: 'BarlowCondensed',
-            fontWeight: FontWeight.w700,
-            fontSize: 30,
-            color: Colors.black,
-          ),
+        centerTitle: false,
+        title: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            const SizedBox(height: 50),
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0),
+              child: Text(
+                "GYMSHARK",
+                style: const TextStyle(
+                  fontFamily: 'BarlowCondensed',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ],
         ),
         iconTheme: const IconThemeData(color: Colors.black),
         titleTextStyle: const TextStyle(color: Colors.black),
