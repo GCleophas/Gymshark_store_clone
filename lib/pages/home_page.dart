@@ -46,7 +46,15 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
-        title: Image.asset('assets/images/logo_long.png', width: 130),
+        title: Text(
+          "GYMSHARK",
+          style: const TextStyle(
+            fontFamily: 'BarlowCondensed',
+            fontWeight: FontWeight.w700,
+            fontSize: 30,
+            color: Colors.black,
+          ),
+        ),
         iconTheme: const IconThemeData(color: Colors.black),
         titleTextStyle: const TextStyle(color: Colors.black),
       ),
