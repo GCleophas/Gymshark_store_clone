@@ -17,10 +17,13 @@ class WelcomePage extends StatelessWidget {
         padding: const EdgeInsets.all(24.0),
         child: SizedBox(
           width: double.infinity,
-          height: 40,
+          height: 60,
           child: Builder(
             builder: (context) => ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black,
+                minimumSize: const Size.fromHeight(100),
+              ),
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -30,7 +33,7 @@ class WelcomePage extends StatelessWidget {
               child: const Text(
                 'Continue the store!',
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 20,
                   fontFamily: 'BebasNeue',
                   color: Colors.white,
                 ),
