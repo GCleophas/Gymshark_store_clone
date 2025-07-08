@@ -10,6 +10,9 @@ class ItemPage extends StatefulWidget {
 }
 
 class _ItemPageState extends State<ItemPage> {
+  Color? selectedColor;
+  String? selectedSize;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,6 +89,142 @@ class _ItemPageState extends State<ItemPage> {
               ],
             ),
 
+            // Item color selection
+            Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Black color button
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedColor = Colors.black;
+                      });
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: selectedColor == Colors.black
+                              ? Colors.black
+                              : Colors.grey,
+                          width: 2,
+                        ),
+                      ),
+                      child: const CircleAvatar(
+                        radius: 15,
+                        backgroundColor: Colors.black,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+
+                  // Orange color button
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedColor = Colors.orange[50];
+                      });
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: selectedColor == Colors.orange[50]
+                              ? Colors.black
+                              : Colors.grey,
+                          width: 2,
+                        ),
+                      ),
+                      child: CircleAvatar(
+                        radius: 15,
+                        backgroundColor: Colors.orange[50],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+
+                  // BlueGrey color button
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedColor = Colors.blueGrey;
+                      });
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: selectedColor == Colors.blueGrey
+                              ? Colors.black
+                              : Colors.grey,
+                          width: 2,
+                        ),
+                      ),
+                      child: const CircleAvatar(
+                        radius: 15,
+                        backgroundColor: Colors.blueGrey,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+
+                  // Red color button
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedColor = Colors.red[200];
+                      });
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: selectedColor == Colors.red[200]
+                              ? Colors.black
+                              : Colors.grey,
+                          width: 2,
+                        ),
+                      ),
+                      child: CircleAvatar(
+                        radius: 15,
+                        backgroundColor: Colors.red[200],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // Item size selection
+            Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 30,
+                ),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey[300]!),
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text('XS', style: TextStyle(fontSize: 14)),
+                    Text('S', style: TextStyle(fontSize: 14)),
+                    Text('M', style: TextStyle(fontSize: 14)),
+                    Text('L', style: TextStyle(fontSize: 14)),
+                    Text('XL', style: TextStyle(fontSize: 14)),
+                    Text('XXL', style: TextStyle(fontSize: 14)),
+                    Text('3XL', style: TextStyle(fontSize: 14)),
+                  ],
+                ),
+              ),
+            ),
+
+            // Item description
             Padding(
               padding: const EdgeInsets.all(24.0),
               child: ElevatedButton(
